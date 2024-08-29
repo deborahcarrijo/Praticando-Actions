@@ -1,0 +1,56 @@
+name: PHP CI/CD
+
+on: [push, pull_request]
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up PHP
+      uses: shivammathur/setup-php@v2
+      with:
+        php-version: '8.0'
+        extensions: mbstring, zip
+
+    - name: Install dependencies
+      run: composer install --prefer-dist --no-progress --no-suggest
+
+    - name: Run lint
+      run: composer lint
+
+    - name: Run static analysis
+      run: composer analyze
+
+    - name: Run tests
+      run: composer test
+
+    - name: Generate coverage report
+      run: vendor/bin/phpunit --coverage-text --coverage-html=coverage
+
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v2
+      with:
+        name: coverage-report
+        path: coverage
+
+    - name: Generate documentation
+      run: vendor/bin/phpdoc -d src -t docs
+
+    - name: Upload documentation
+      uses: actions/upload-artifact@v2
+      with:
+        name: documentation
+        path: docs
+
+    - name: Create release package
+      run: zip -r myproject.zip src vendor
+
+    - name: Upload release package
+      uses: actions/upload-artifact@v2
+      with:
+        name: release-package
+        path: myproject.zip

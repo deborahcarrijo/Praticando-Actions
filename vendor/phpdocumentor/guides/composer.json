@@ -1,0 +1,43 @@
+{
+    "name": "phpdocumentor/guides",
+    "description": "Contains the core functionality from the phpDocumentor Guides.",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://www.phpdoc.org",
+    "config": {
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "phpDocumentor\\Guides\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "phpDocumentor\\Guides\\": [
+                "tests/unit/"
+            ]
+        }
+    },
+    "minimum-stability": "stable",
+    "require": {
+        "php": "^8.1",
+        "ext-json": "*",
+        "ext-zlib": "*",
+        "doctrine/deprecations": "^1.0",
+        "league/flysystem": "^1.1",
+        "league/tactician": "^1.1",
+        "league/uri": "^6.5 || ^7.0",
+        "phpdocumentor/flyfinder": "^1.1",
+        "psr/event-dispatcher": "^1.0",
+        "symfony/clock": "^6.4.3",
+        "symfony/string": "^5.4 || ^6.3 || ^7.0",
+        "symfony/translation-contracts": "^3.4.1",
+        "symfony/http-client": "^6.4.4",
+        "twig/twig": "~2.15 || ^3.0",
+        "webmozart/assert": "^1.11"
+    },
+    "require-dev": {
+        "psr/log": "^2.0 || ^3.0"
+    }
+}
