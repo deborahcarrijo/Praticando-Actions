@@ -13,8 +13,8 @@ jobs:
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.0'
-          extensions: mbstring, zip
+          php-version: '8.1'
+          extensions: mbstring, intl, curl, xml, json, sqlite
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --no-suggest
