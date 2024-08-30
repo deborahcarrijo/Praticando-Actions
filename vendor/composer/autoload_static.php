@@ -120,6 +120,7 @@ class ComposerStaticInit942bdf4e13e7b098c5ed3b1750b38d3e
         ),
         'F' => 
         array (
+            'Funcoes\\' => 8,
             'Flyfinder\\' => 10,
         ),
         'D' => 
@@ -141,8 +142,8 @@ class ComposerStaticInit942bdf4e13e7b098c5ed3b1750b38d3e
         'phpDocumentor\\Reflection\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
-            2 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
+            2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
         ),
         'phpDocumentor\\JsonPath\\' => 
         array (
@@ -151,9 +152,9 @@ class ComposerStaticInit942bdf4e13e7b098c5ed3b1750b38d3e
         'phpDocumentor\\Guides\\' => 
         array (
             0 => __DIR__ . '/..' . '/phpdocumentor/guides/src',
-            1 => __DIR__ . '/..' . '/phpdocumentor/guides-restructured-text/src',
+            1 => __DIR__ . '/..' . '/phpdocumentor/guides-graphs/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/guides-markdown/src',
-            3 => __DIR__ . '/..' . '/phpdocumentor/guides-graphs/src',
+            3 => __DIR__ . '/..' . '/phpdocumentor/guides-restructured-text/src',
         ),
         'phpDocumentor\\GraphViz\\PHPStan\\' => 
         array (
@@ -338,8 +339,8 @@ class ComposerStaticInit942bdf4e13e7b098c5ed3b1750b38d3e
         ),
         'League\\Uri\\' => 
         array (
-            0 => __DIR__ . '/..' . '/league/uri-interfaces/src',
-            1 => __DIR__ . '/..' . '/league/uri/src',
+            0 => __DIR__ . '/..' . '/league/uri/src',
+            1 => __DIR__ . '/..' . '/league/uri-interfaces/src',
         ),
         'League\\Tactician\\' => 
         array (
@@ -372,6 +373,10 @@ class ComposerStaticInit942bdf4e13e7b098c5ed3b1750b38d3e
         'Jean85\\' => 
         array (
             0 => __DIR__ . '/..' . '/jean85/pretty-package-versions/src',
+        ),
+        'Funcoes\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
         'Flyfinder\\' => 
         array (

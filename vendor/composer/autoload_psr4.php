@@ -6,9 +6,9 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/type-resolver/src', $vendorDir . '/phpdocumentor/reflection-docblock/src'),
+    'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
     'phpDocumentor\\JsonPath\\' => array($vendorDir . '/phpdocumentor/json-path/src'),
-    'phpDocumentor\\Guides\\' => array($vendorDir . '/phpdocumentor/guides/src', $vendorDir . '/phpdocumentor/guides-restructured-text/src', $vendorDir . '/phpdocumentor/guides-markdown/src', $vendorDir . '/phpdocumentor/guides-graphs/src'),
+    'phpDocumentor\\Guides\\' => array($vendorDir . '/phpdocumentor/guides/src', $vendorDir . '/phpdocumentor/guides-graphs/src', $vendorDir . '/phpdocumentor/guides-markdown/src', $vendorDir . '/phpdocumentor/guides-restructured-text/src'),
     'phpDocumentor\\GraphViz\\PHPStan\\' => array($vendorDir . '/phpdocumentor/graphviz/src/phpDocumentor/PHPStan'),
     'phpDocumentor\\GraphViz\\' => array($vendorDir . '/phpdocumentor/graphviz/src/phpDocumentor/GraphViz'),
     'phpDocumentor\\' => array($vendorDir . '/phpdocumentor/phpdocumentor/src/phpDocumentor', $vendorDir . '/phpdocumentor/reflection/src/phpDocumentor'),
@@ -54,7 +54,7 @@ return array(
     'PDepend\\' => array($vendorDir . '/pdepend/pdepend/src/main/php/PDepend'),
     'Monolog\\' => array($vendorDir . '/monolog/monolog/src/Monolog'),
     'Masterminds\\' => array($vendorDir . '/masterminds/html5/src'),
-    'League\\Uri\\' => array($vendorDir . '/league/uri-interfaces/src', $vendorDir . '/league/uri/src'),
+    'League\\Uri\\' => array($vendorDir . '/league/uri/src', $vendorDir . '/league/uri-interfaces/src'),
     'League\\Tactician\\' => array($vendorDir . '/league/tactician/src'),
     'League\\Pipeline\\' => array($vendorDir . '/league/pipeline/src'),
     'League\\MimeTypeDetection\\' => array($vendorDir . '/league/mime-type-detection/src'),
@@ -63,6 +63,7 @@ return array(
     'League\\Config\\' => array($vendorDir . '/league/config/src'),
     'League\\CommonMark\\' => array($vendorDir . '/league/commonmark/src'),
     'Jean85\\' => array($vendorDir . '/jean85/pretty-package-versions/src'),
+    'Funcoes\\' => array($baseDir . '/src'),
     'Flyfinder\\' => array($vendorDir . '/phpdocumentor/flyfinder/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'Doctrine\\Deprecations\\' => array($vendorDir . '/doctrine/deprecations/lib/Doctrine/Deprecations'),

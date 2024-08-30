@@ -1,13 +1,13 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use Funcoes\FuncoesMatematica;
+use Funcoes\Funcoes;
 
 class FuncoesTest extends TestCase
 {
     public function testSoma()
     {
-        $obj = new FuncoesMatematica;
+        $obj = new Funcoes();
         $this->assertEquals(4, $obj->soma(2, 2));
     }
 }

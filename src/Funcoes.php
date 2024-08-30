@@ -2,7 +2,7 @@
 
 namespace Funcoes;
 
-class FuncoesMatematica
+class Funcoes
 {
     public function soma($a, $b)
     {
