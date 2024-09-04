@@ -1,0 +1,64 @@
+nome: Relatório de Bug
+descrição: Registre um bug.
+título: "[Bug]: "
+rótulos: ["bug", "triagem"]
+projetos: ["octo-org/1", "octo-org/44"]
+cessionários:
+  - polvo-gato
+corpo:
+  - tipo: markdown
+    atributos:
+      valor: |
+        Obrigado por reservar um tempo para preencher este relatório de bug!
+  - tipo: entrada
+    id: contato
+    atributos:
+      etiqueta: Detalhes de contato
+      descrição: Como podemos entrar em contato com você se precisarmos de mais informações?
+      espaço reservado: ex. email@example.com
+    validações:
+      obrigatório: falso
+  - tipo: textarea
+    id: o que aconteceu
+    atributos:
+      rótulo: O que aconteceu?
+      descrição: Diga-nos também o que você esperava que acontecesse?
+      espaço reservado: Diga-nos o que você vê!
+      valor: "Ocorreu um bug!"
+    validações:
+      obrigatório: verdadeiro
+  - tipo: suspenso
+    id: versão
+    atributos:
+      rótulo: Versão
+      descrição: Qual versão do nosso software você está executando?
+      opções:
+        - 1.0.2 (Padrão)
+        - 1.0.3 (Borda)
+      padrão: 0
+    validações:
+      obrigatório: verdadeiro
+  - tipo: suspenso
+    id: navegadores
+    atributos:
+      rótulo: Em quais navegadores você está vendo o problema?
+      múltiplo: verdadeiro
+      opções:
+        - Raposa de fogo
+        - Cromado
+        - Safári
+        - Microsoft borda
+  - tipo: textarea
+    id: registros
+    atributos:
+      rótulo: Saída de log relevante
+      descrição: Copie e cole qualquer saída de log relevante. Isso será formatado automaticamente em código, então não há necessidade de acentos graves.
+      renderizar: concha
+  - tipo: caixas de seleção
+    id: termos
+    atributos:
+      etiqueta: Código de Conduta
+      descrição: Ao enviar este problema, você concorda em seguir nosso [Código de Conduta](https://example.com).
+      opções:
+        - rótulo: Concordo em seguir o Código de Conduta deste projeto
+          obrigatório: verdadeiro
