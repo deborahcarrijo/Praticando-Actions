@@ -1,0 +1,8 @@
+blank_issues_enabled: false 
+contact_links: 
+  - nome: 
+    URL de suporte da comunidade do GitHub: https://github.com/orgs/community/discussions 
+    sobre: ​​Faça e responda perguntas aqui. 
+  - nome: GitHub Security Bug Bounty 
+    URL: https://bounty.github.com/ 
+    sobre: ​​Relate vulnerabilidades de segurança aqui.
