@@ -1,146 +1,64 @@
-name: "Change Request"
-description: "Formulário para solicitar uma modificação"
-title: "Change Request: [Título do Pedido]"
-labels: ["change request"]
-assignees: ""
-
+name: Bug Report
+description: File a bug report.
+title: "[Bug]: "
+labels: ["bug", "triage"]
+projects: ["octo-org/1", "octo-org/44"]
+assignees:
+  - octocat
 body:
   - type: markdown
     attributes:
-      value: "## Change Request Form"
-
+      value: |
+        Thanks for taking the time to fill out this bug report!
   - type: input
-    id: project
+    id: contact
     attributes:
-      label: "Project"
-      description: "Informe o nome do projeto"
-      placeholder: "Ex: SICSA/AppProcessing"
-      value: ""
-    validations:
-      required: true
-
-  - type: input
-    id: number
-    attributes:
-      label: "Request Number"
-      description: "Informe o número da solicitação"
-      placeholder: "Ex: 23/02"
-      value: ""
-    validations:
-      required: true
-
-  - type: input
-    id: requester
-    attributes:
-      label: "Change Requester"
-      description: "Informe o nome da pessoa que está solicitando a mudança"
-      placeholder: "Ex: I. Sommerville"
-      value: ""
-    validations:
-      required: true
-
-  - type: input
-    id: date
-    attributes:
-      label: "Request Date"
-      description: "Informe a data de solicitação"
-      placeholder: "Ex: 20/07/12"
-      value: ""
-    validations:
-      required: true
-
-  - type: textarea
-    id: requested_change
-    attributes:
-      label: "Requested Change"
-      description: "Descreva a mudança solicitada"
-      value: "The status of applicants (rejected, accepted, etc.) should be shown visually in the displayed list of applicants."
-    validations:
-      required: true
-
-  - type: input
-    id: change_analyzer
-    attributes:
-      label: "Change Analyzer"
-      description: "Quem vai analisar a solicitação de mudança"
-      placeholder: "Ex: R. Looek"
-      value: ""
-    validations:
-      required: true
-
-  - type: input
-    id: analysis_date
-    attributes:
-      label: "Analysis Date"
-      description: "Data da análise"
-      placeholder: "Ex: 25/07/12"
-      value: ""
-    validations:
-      required: true
-
-  - type: textarea
-    id: components_affected
-    attributes:
-      label: "Components Affected"
-      description: "Componentes afetados pela mudança"
-      value: "ApplicantListDisplay, StatusUpdater"
-    validations:
-      required: true
-
-  - type: textarea
-    id: associated_components
-    attributes:
-      label: "Associated Components"
-      description: "Componentes associados"
-      value: "StudentDatabase"
+      label: Contact Details
+      description: How can we get in touch with you if we need more info?
+      placeholder: ex. email@example.com
     validations:
       required: false
-
   - type: textarea
-    id: change_assessment
+    id: what-happened
     attributes:
-      label: "Change Assessment"
-      description: "Avaliação da mudança"
-      value: "Relatively simple to implement by changing the display color according to status."
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
       required: true
-
-  - type: input
-    id: change_priority
+  - type: dropdown
+    id: version
     attributes:
-      label: "Change Priority"
-      description: "Prioridade da mudança"
-      placeholder: "Ex: Medium"
-      value: ""
+      label: Version
+      description: What version of our software are you running?
+      options:
+        - 1.0.2 (Default)
+        - 1.0.3 (Edge)
+      default: 0
     validations:
       required: true
-
-  - type: input
-    id: estimated_effort
+  - type: dropdown
+    id: browsers
     attributes:
-      label: "Estimated Effort"
-      description: "Esforço estimado para a mudança (em horas)"
-      placeholder: "Ex: 2 hours"
-      value: ""
-    validations:
-      required: true
-
-  - type: input
-    id: decision_date
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+  - type: textarea
+    id: logs
     attributes:
-      label: "CCB Decision Date"
-      description: "Data da decisão do Change Control Board"
-      placeholder: "Ex: 30/07/12"
-      value: ""
-    validations:
-      required: true
-
-  - type: input
-    id: release_version
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+  - type: checkboxes
+    id: terms
     attributes:
-      label: "Release Version"
-      description: "Versão do Release onde a mudança será implementada"
-      placeholder: "Ex: 1.2"
-      value: ""
-    validations:
-      required: true
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com). 
+      options:
+        - label: I agree to follow this project's Code of Conduct
+          required: true
